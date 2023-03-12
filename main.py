@@ -3,11 +3,11 @@ import ATM
 
 acc = Account.Account()
 while True:
-    chk_account = input("do you have an account (yes or no):").lower()
+    chk_account = input("do you have an account (yes or no): ").lower()
     login = False
     if chk_account == "yes":
-        acc_num = input("Enter account number: ")
-        pin_number = input("Enter pin number")
+        acc_num = input("Enter account number : ")
+        pin_number = input("Enter pin number: ")
 
         if acc.Authentication(acc_num, pin_number):
             login = True
