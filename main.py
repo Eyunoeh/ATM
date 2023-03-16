@@ -2,7 +2,9 @@ import Account
 import ATM
 
 acc = Account.Account()
-while True:
+
+server_running = True
+while server_running:
     chk_account = input("do you have an account (yes or no): ").lower()
     login = False
     if chk_account == "yes":
@@ -20,7 +22,7 @@ while True:
                                     "Withdraw [3]\n"
                                     "Logout [4]\n")
                 if user_choice == "1":
-                    print(f"Your current balance is: {atm.balance_inquiry(account_number=acc_num)}")
+                    print(f"Your current balance is: {atm.balance_inquiry()}")
                 elif user_choice == "2":
                     atm.deposit(acc_num)
                 elif user_choice == "3":
@@ -30,5 +32,7 @@ while True:
 
     elif chk_account == "no":
         acc.create_account()
+    elif chk_account == "quit":
+        server_running = False
     else:
         print("\nTry again please\n")

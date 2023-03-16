@@ -26,5 +26,5 @@ class ATM:
         else:
             print("Transaction Failed")
 
-    def balance_inquiry(self, account_number):
-        return self.acc.account[account_number][1]
+    def balance_inquiry(self):
+        return self.balance
