@@ -24,6 +24,10 @@ class Account:
             acc_pin = self.bank_db.account[account_number][2]
             if pin == acc_pin:
                 return True
+            else:
+                print("Incorrect pin number")
+        else:
+            print("Account number doesn't exist")
         return False
 
     def getAccount(self, account_number):
